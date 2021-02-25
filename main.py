@@ -46,7 +46,7 @@ def rsa_helper(input):
 
 def enter():
     while True:
-        crypto_tool = input("\n[@User] Choose method: \n [1] Hash\n [2] RSA\n [3] AES (ECC)\n [4] AES (CBC) \n [5] Diffie Helam \n [-1] Exit\n")
+        crypto_tool = input("\n[@User] Choose method: \n [1] Hash\n [2] RSA\n [3] AES (ECC)\n [4] AES (CBC) \n [5] Diffie Hellman \n [-1] Exit\n")
         if crypto_tool == '1':
             hash_func()
         elif crypto_tool == '2':
