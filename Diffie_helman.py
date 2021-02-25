@@ -54,6 +54,6 @@ def dff_func():
         print("[Encrypted Diffie Helman]:", str(encrypted_message)[2:-1])
 
         decrypted_message = aaaa.decrypt(bbbb.public_key, encrypted_message, bbbb.IV)
-        print("[Decrypted Diffie Helman]", str(decrypted_message)[2:-1])
+        print("[Decrypted Diffie Hellman]", str(decrypted_message)[2:-1])
     except:
         print("[Error] Invalid message")
