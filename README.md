@@ -7,11 +7,14 @@ This is a tool used for cryptology. One can encode and partially decode using di
 <ol> 
   <li> Download or clone repository </li>
   <li> cd ./Cypher_tools-main </li>
-  <li> pip install requirements.txt </li>
-</ol>
-<h2> Usage </h2>
-<ol>
+  <li> pip install -r requirements.txt </li>
   <li> python main.py </li>
-  <li> Currently can choose hash or RSA encryption and some decryption/decoding. User inputs what is desired using the number of what is desired </li>
-  <li> May prompt for encryption/decrpytion. User chooses what is desired and enters text to encrypt/decrypt </li>
+</ol>
+<h2> Tool includes </h2>
+<ol>
+  <li> Hashing (Base 54, SHA1, SHA256, SHA512, MD5) </li>
+  <li> RSA </li>
+  <li> AES (ECC) </li>
+  <li> AES (CBC) </li>
+  <li> Diffie Hellman </li>
 </ol>
