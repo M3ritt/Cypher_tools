@@ -5,6 +5,7 @@ import AES
 import Diffie_helman
 import hash
 import rsa
+import img
 
 
 def hash_func():
@@ -44,9 +45,19 @@ def rsa_helper(input):
         print("[Error] Invalid input. Changing bit size command is 2 -some_number")
 
 
+def image_helper():
+    is_encode = input("\n[@User]:\n [1] Encryption \n [2] Decryption\n")
+    if is_encode == '1':
+        img.encrypt_image()
+    elif is_encode == '2':
+        img.decrypt_image()
+    else:
+        print('[Error] Invalid input')
+
+
 def enter():
     while True:
-        crypto_tool = input("\n[@User] Choose method: \n [1] Hash\n [2] RSA\n [3] AES (ECC)\n [4] AES (CBC) \n [5] Diffie Hellman \n [-1] Exit\n")
+        crypto_tool = input("\n[@User] Choose method: \n [1] Hash\n [2] RSA\n [3] AES (ECC)\n [4] AES (CBC) \n [5] Diffie Hellman \n [6] Image Encryption/Decryption \n [-1] Exit\n")
         if crypto_tool == '1':
             hash_func()
         elif crypto_tool == '2':
@@ -59,6 +70,8 @@ def enter():
             AES.aes_cbc()
         elif crypto_tool == '5':
             Diffie_helman.dff_func()
+        elif crypto_tool == '6':
+            image_helper()
         elif crypto_tool == '-1':
             print('[Exiting]')
             os.system('cls' if os.name=='nt' else 'clear')
