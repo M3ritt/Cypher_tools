@@ -6,6 +6,7 @@ import Diffie_helman
 import hash
 import rsa
 import img
+import file
 
 
 def hash_func():
@@ -55,9 +56,21 @@ def image_helper():
         print('[Error] Invalid input')
 
 
+def file_helper():
+    is_encode = input("\n[@User]:\n [1] Encryption \n [2] Decryption\n")
+    if is_encode == '1':
+        file.encrypt_file()
+    elif is_encode == '2':
+        file.decrypt_file()
+    else:
+        print('[Error] Invalid input')
+
+
 def enter():
     while True:
-        crypto_tool = input("\n[@User] Choose method: \n [1] Hash\n [2] RSA\n [3] AES (ECC)\n [4] AES (CBC) \n [5] Diffie Hellman \n [6] Image Encryption/Decryption \n [-1] Exit\n")
+        crypto_tool = input("\n[@User] Choose method: \n [1] Hash\n [2] RSA\n [3] AES (ECC)\n [4] AES (CBC) \n "
+                            "[5] Diffie Hellman \n [6] Image Encryption/Decryption \n "
+                            "[7] File Encryption/Decryption \n [-1] Exit\n")
         if crypto_tool == '1':
             hash_func()
         elif crypto_tool == '2':
@@ -72,6 +85,8 @@ def enter():
             Diffie_helman.dff_func()
         elif crypto_tool == '6':
             image_helper()
+        elif crypto_tool == '7':
+            file_helper()
         elif crypto_tool == '-1':
             print('[Exiting]')
             os.system('cls' if os.name=='nt' else 'clear')
