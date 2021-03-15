@@ -18,4 +18,5 @@ This is a tool used for cryptology. One can encode and partially decode using di
   <li> AES (CBC) </li>
   <li> Diffie Hellman </li>
   <li> Image encryption/decryption </li>
+  <li> File encryption/decryption <li>
 </ol>
