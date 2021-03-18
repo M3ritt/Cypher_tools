@@ -1,11 +1,11 @@
-def dff_func():
-    from cryptography.hazmat.backends import default_backend
-    from cryptography.hazmat.primitives import hashes, padding
-    from cryptography.hazmat.primitives.asymmetric import ec
-    from cryptography.hazmat.primitives.kdf.hkdf import HKDF
-    from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-    from secrets import token_bytes
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import hashes, padding
+from cryptography.hazmat.primitives.asymmetric import ec
+from cryptography.hazmat.primitives.kdf.hkdf import HKDF
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from secrets import token_bytes
 
+def dff_func(text=""):
     class DiffieHellman:
         def __init__(self):
             self.diffieHellman = ec.generate_private_key(ec.SECP384R1(), default_backend())
@@ -47,13 +47,14 @@ def dff_func():
             return unpadder.update(decrypted_data) + unpadder.finalize()
 
     try:
-        text = input("\n[@User] Enter message to encrypt: ")
+        if text == "":
+            text = input("\n[@User] Enter message to encrypt: ")
         aaaa = DiffieHellman()
         bbbb = DiffieHellman()
         encrypted_message = bbbb.encrypt(aaaa.public_key, text)
-        print("[Encrypted Diffie Helman]:", str(encrypted_message)[2:-1])
+        print("[Encrypted Diffie Hellman]:", str(encrypted_message)[2:-1])
 
         decrypted_message = aaaa.decrypt(bbbb.public_key, encrypted_message, bbbb.IV)
-        print("[Decrypted Diffie Hellman]", str(decrypted_message)[2:-1])
+        print("[Decrypted Diffie Helman]", str(decrypted_message)[2:-1])
     except:
         print("[Error] Invalid message")
