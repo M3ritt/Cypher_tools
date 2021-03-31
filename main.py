@@ -137,20 +137,20 @@ def cmd_tool():
                 except IndexError:
                     rsa.rsa_func(result)
 
-            elif "AES_ECC" in crypto_tool:
+            elif "aes_ecc" in crypto_tool:
                 try:
                     AES.aes_ecc(result.split(',')[0], result.split(',')[1])
                 except IndexError:
                     print(" [Error] : Should be in the form of: "
                           "AES_ECC(some_message_to_encrypt, some_authenticated_data)")
 
-            elif "AES_CBC" in crypto_tool:
+            elif "aes_cbc" in crypto_tool:
                 try:
                     AES.aes_cbc(result.split(',')[0], result.split(',')[1])
                 except IndexError:
                     print(" [Error] : Should be in the form of: AES_CBC(some_message_to_encrypt, some_key) ")
 
-            elif "DH" in crypto_tool:
+            elif "dh" in crypto_tool:
                 Diffie_helman.dff_func(result)
 
             elif "image_encode" in crypto_tool:
@@ -172,7 +172,7 @@ def cmd_tool():
                 file.decrypt_file(result)
 
             else:
-                print('[Error] Invalid input. --help for command options')
+                print('[Error] ', crypto_tool , ' is an invalid input. --help for command options')
 
 
 def enter():
