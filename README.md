@@ -20,3 +20,12 @@ This is a tool used for cryptology. One can encode and partially decode using di
   <li> Image encryption/decryption </li>
   <li> File encryption/decryption </li>
 </ol>
+
+<h2> Example </h2>
+<bold> Non command Line Edition: </bold> 
+
+![Example](https://user-images.githubusercontent.com/36414900/113207236-5fee1c00-923e-11eb-8ace-6a94585fd203.png)
+
+<bold> Command Line Edition: </bold>
+
+![cmd_example](https://user-images.githubusercontent.com/36414900/113207435-9c217c80-923e-11eb-9fb8-6b19ed2ba77a.png)
